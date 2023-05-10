@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: "learn-typescript-26486.firebaseapp.com",
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   projectId: "learn-typescript-26486",
   storageBucket: "learn-typescript-26486.appspot.com",
   messagingSenderId: "202066094188",
