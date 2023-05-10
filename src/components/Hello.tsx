@@ -7,8 +7,10 @@ type HelloProps = {
 };
 
 export const Hello = (props: HelloProps) => {
-  const [name, setName] = useState("rỗng");
-
+  const [name, setName] = useState("Home");
+  useEffect(() => {
+    //props thay đổi render lại component
+  }, [props]);
   return (
     <div>
       {props.isLogin

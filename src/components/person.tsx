@@ -8,7 +8,9 @@ type PersonProps = {
 export const Person = (props: PersonProps) => {
   return (
     <div>
-      Hello {props.name.last} {props.name.first} Person
+      <p className="text-red-500">
+        Hello {props.name.last} {props.name.first} Person
+      </p>
     </div>
   );
 };
