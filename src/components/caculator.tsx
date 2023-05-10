@@ -15,7 +15,7 @@ export const Caculator = () => {
   console.log("a");
   return (
     <div>
-      <h1 className="text-2xl font-bold">{amount ? amount : 1}</h1>
+      <h1 className="text-2xl font-bold">{amount}</h1>
       <button
         onClick={() => depositMoney(1000)}
         className="border p-2 hover:bg-purple-500">
