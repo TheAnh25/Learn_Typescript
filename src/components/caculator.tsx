@@ -26,7 +26,9 @@ export const Caculator = () => {
         className="border p-2 hover:bg-sky-500">
         Withdraw
       </button>
-      <button onClick={() => bankrupt} className="border p-2 hover:bg-pink-500">
+      <button
+        onClick={() => bankrupt(0)}
+        className="border p-2 hover:bg-pink-500">
         Bankrupt
       </button>
     </div>

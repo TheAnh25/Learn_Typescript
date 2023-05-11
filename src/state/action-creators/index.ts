@@ -20,10 +20,11 @@ export const withdrawMoney = (amout: number) => {
   };
 };
 
-export const bankrupt = () => {
+export const bankrupt = (amout: number) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.BANKRUPT,
+      payload: amout,
     });
   };
 };
