@@ -71,7 +71,7 @@ export const Firestore = () => {
     };
     fetchData();
   }, [name, age, country]);
-
+  console.log(data.id);
   const handleDelete = async (id: any) => {
     try {
       await deleteDoc(doc(db, "Info", id));
@@ -116,6 +116,7 @@ export const Firestore = () => {
             <form onSubmit={handleDelete} key={data?.id}>
               <div className="flex gap-4 items-center justify-center">
                 <div className="flex m-4 border items-center justify-center">
+                  <p className="mx-4">Id: {data?.id}</p>
                   <p className="mx-4">Tôi tên là {data?.name}</p>
                   <p className="mx-4">Năm nay {data?.age}</p>
                   <p>Hiện đang sống ở {data?.country}</p>
@@ -137,11 +138,11 @@ export const Firestore = () => {
         </button>
       </form>
 
-      <button
+      {/* <button
         // onClick={() => bankrupt}
         className="border p-2 hover:bg-pink-500">
         Bankrupt
-      </button>
+      </button> */}
     </div>
   );
 };
