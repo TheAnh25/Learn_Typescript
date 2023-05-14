@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Caculator } from "./components/caculator";
 import { ChildrenProps } from "./components/childrenProps";
 import { Firestore } from "./components/firestore";
+import { Header } from "./components";
 
 function App() {
   const personName = {
@@ -35,8 +36,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/">
+            <Route index element={<Header />} />
             <Route
-              index
+              path="hello"
               element={<Hello name="Thế Anh IT" age={22} isLogin={true} />}
             />
             <Route path="login" element={<Login />} />

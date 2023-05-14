@@ -15,4 +15,13 @@ interface BankruptAction {
   payload: number;
 }
 
-export type Action = DepositAction | WithdrawAction | BankruptAction;
+interface LoginAction {
+  type: ActionType.LOGIN;
+  payload: any;
+}
+
+export type Action =
+  | DepositAction
+  | WithdrawAction
+  | BankruptAction
+  | LoginAction;

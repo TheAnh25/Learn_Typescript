@@ -14,11 +14,6 @@ type Auth = {
 };
 
 export const Firestore = () => {
-  // const [data, setData] = useState<any>({
-  //   age: 0,
-  //   name: "The Anh",
-  //   country: "TP HCM",
-  // });
   const [data, setData] = useState<any>([]);
   const [name, setName] = useState<any>({ name: "The Anh" });
   const [age, setAge] = useState<any>({ age: 21 });
@@ -37,24 +32,6 @@ export const Firestore = () => {
       console.log(err);
     }
   };
-
-  // const handleGetData = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-
-  //   const docRef = doc(db, "Info", "A4wn7fR32bVSJhaflRam");
-  //   const docSnap = await getDoc(docRef);
-  //   try {
-  //     if (docSnap.exists()) {
-  //       console.log("Document data:", docSnap.data());
-  //       setData(docSnap.data());
-  //     } else {
-  //       // docSnap.data() will be undefined in this case
-  //       console.log("No such document!");
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -130,9 +107,7 @@ export const Firestore = () => {
             </form>
           ))}
       </div>
-      <form
-      //  onSubmit={handleGetData}
-      >
+      <form>
         <button type="submit" className="border p-2 hover:bg-sky-500">
           Get Data Firebase
         </button>

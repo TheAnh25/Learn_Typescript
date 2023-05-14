@@ -28,3 +28,12 @@ export const bankrupt = (amout: number) => {
     });
   };
 };
+
+export const login = (currentUser: any) => {
+  return (dispatch: Dispatch<Action>) => {
+    dispatch({
+      type: ActionType.LOGIN,
+      payload: currentUser,
+    });
+  };
+};
